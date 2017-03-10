@@ -33,7 +33,7 @@ Depending on the data, the runtime can be nlog(n) or n^2. Because of this, it be
   * Suggested by PChan: utilizing bucket sort to find the median, but then Java has to sort the buckets anyways so...probably still O(n^2). 
   * Cutting down the min and max of the array each time also is an O(n^2) way of finding the median of an unsorted array.
  * **Best Option:** Choose a random pivot point between the parameters left and right everytime. With luck, you may be able to hit upon a number that is the median of the region, or close to it. The disadvantage is that this is inconsistent. 
- * **Best Option 2:** Find the arithmetic mean, and then a number a certain range from it. However, this method: 1) assumes there are no/few outliers; 2) requires a linear search; 3) if the arithmetic mean is not a term in the array, you would have to determine the value of epsilon away from the mean that is the pivot point, and if no numbers fall within that range, account for that case as well. 
+ * **Best Option 2:** Find the arithmetic mean, and then the number closest to it. However, this method: 1) assumes there are no/few outliers; 2) requires two linear searches [1 to find the arithmetic mean, one to find the number closest. 
  * **What we did:** We went with the random pivot point. It seems overall much simpler and easier to implement; it comes without the cost of having to run more searches or account for extremities, and it is far more likely for the pivot point to be chosen near the middle than at an extremity, such as the beginning or end of an array. 
 <br> <br> 
  
