@@ -4,6 +4,7 @@
 **Methodology:**<br> 
 **Time Measurements:**<br> 
 **Evaluation of QuickSort's runtime:**<br> 
+[Graphs and Explanations](https://docs.google.com/document/d/16RJIrA6SCoNeSoqjFNfzsL3CF7ibyz0a6IO8B6nSwTo/pub)
 **Question: What is the optimal pivot point?** <br> 
  * Using the middle index as the pivot (e.g. left+right / 2) doesn't always guarantee O(nlogn) runtime because of cases such as the following arrays: 
  <br> ``arr1 = {5, 3, 1, 0, 2, 4, 6}``
