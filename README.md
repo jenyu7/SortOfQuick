@@ -2,9 +2,15 @@
 ###### APCS2 Period 5: Brown Mykolyk
 ###### Jennifer Yu, Eric Zhang, Angel Ng
 **Methodology:**<br> 
+ 1. Create a multitude of arrays (in our case, we created 29 arrays, of size 1000, 1100, 2000, 3000...800000, 900000). Store these arrays in a 2D Array. 
+ 2. Run QuickSort on a buffer array, to warm up the JVM. 
+ 3. Using a for loop nested within a for loop, sort each array 30 times, taking the runtime each time using System.nanoTime(), and augmenting a term in an array which stores runtimes for all of the arrays. 
+ 4. Acquire the average of the runtimes for each array. 
+ 5. Display the length and the average runtime in the terminal, and evaluate. 
+<br> @abhatt349 Credit for the idea of augmenting the size of the test arrays linearly instead of by a factor of 10 each time. 
 **Time Measurements:**<br> 
 **Evaluation of QuickSort's runtime:**<br> 
-[Graphs and Explanations](https://docs.google.com/document/d/16RJIrA6SCoNeSoqjFNfzsL3CF7ibyz0a6IO8B6nSwTo/pub)
+[Graphs and Explanations](https://docs.google.com/document/d/16RJIrA6SCoNeSoqjFNfzsL3CF7ibyz0a6IO8B6nSwTo/pub)<br> 
 **Question: What is the optimal pivot point?** <br> 
  * Using the middle index as the pivot (e.g. left+right / 2) doesn't always guarantee O(nlogn) runtime because of cases such as the following arrays: 
  <br> ``arr1 = {5, 3, 1, 0, 2, 4, 6}``
