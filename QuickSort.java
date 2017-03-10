@@ -62,19 +62,20 @@ public class QuickSort
      * void qsort(int[])
      * @param d -- array of ints to be sorted in place
      *****************************************************/
-    public static void qsort( int[] d ) 
+    public static int[] qsort( int[] d ) 
     { 
-	rqsort(d,0,d.length-1);
+	return rqsort(d,0,d.length-1);
     }
 
     // Thinkers are encouraged to roll their own subroutines.
     // Insert your auxiliary helper methods here.
-    public static void rqsort(int[] arr, int left, int right) {
+    public static int[] rqsort(int[] arr, int left, int right) {
 	if (left < right) {
 	    int pvtPos = partition(arr,left,right,(left+right)/2);
 	    rqsort(arr,left,pvtPos-1);
 	    rqsort(arr,pvtPos+1,right);
 	}
+	return arr; 
     }
 
     //borrowed from pikachu's FastSelect.java
