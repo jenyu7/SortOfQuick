@@ -12,6 +12,6 @@
  * If your pivot point was always chosen to be the median of your region, then the algorithm would run in O(nlogn). However, there doesn't seem to be a way to find the median of an unsorted array with an O(n) runtime, which is needed to preserve the supposed O(nlogn) runtime of QuickSort. 
   * Suggested by PChan: utilizing bucket sort to find the median, but then Java has to sort the buckets anyways so...probably still O(n^2). 
   * Cutting down the min and max of the array each time also is an O(n^2) way of finding the median of an unsorted array.
- * Best Option? Choose a random pivot point everytime. With luck, more numbers are toward the middle than towards the ends? 
+ * **Best Option?** Choose a random pivot point everytime. With luck, more numbers are toward the middle than towards the ends? 
  
  
