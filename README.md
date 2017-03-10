@@ -11,9 +11,13 @@
 </ol> 
 <br> 
 @abhatt349 Credit for the idea of augmenting the size of the test arrays linearly instead of by a factor of 10 each time. 
+<br> <br> 
 **Time Measurements:**<br> 
+![QuickSort Table](http://i.imgur.com/4847lZ2.png)
+<br> <br> 
 **Evaluation of QuickSort's runtime:**<br> 
-[Graphs and Explanations](https://docs.google.com/document/d/16RJIrA6SCoNeSoqjFNfzsL3CF7ibyz0a6IO8B6nSwTo/pub)<br> 
+[Graphs and Explanations](https://docs.google.com/document/d/16RJIrA6SCoNeSoqjFNfzsL3CF7ibyz0a6IO8B6nSwTo/pub)
+<br><br>  
 **Question: How does data arrangement affect runtime?**<br>
 Depending on the data, the runtime can be nlog(n) or n^2. Because of this, it becomes difficult to choose the "best" pivot point in which an array would always be sorted in nlog(n) time. Since there is no way to predict the arrangement of an unsorted array input, it becomes difficult for QuickSort to anticipate the pivot point that would be able to most evenly distribute the regions of the array (pivot point would ideally be the median of the array). 
 <br> <br>  
