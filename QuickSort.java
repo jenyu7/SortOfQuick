@@ -71,7 +71,7 @@ public class QuickSort
     // Insert your auxiliary helper methods here.
     public static void rqsort(int[] arr, int left, int right) {
 	if (left < right) {
-	    int pvtPos = partition(arr,left,right,(left+right)/2);
+	    int pvtPos = partition(arr,left,right,((int)(Math.random()*(right-left))+left));
 	    rqsort(arr,left,pvtPos-1);
 	    rqsort(arr,pvtPos+1,right);
 	}

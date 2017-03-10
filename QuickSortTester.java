@@ -48,21 +48,20 @@
 		long[] totalResults = new long[testArray.length];
 		for (int repeat = 0; repeat < 30; repeat++) {
 			for (int count = 0; count < testArray.length; count++) {
-			t0 = System.nanoTime();
-			testArray[count] = QuickSort.qsort(testArray[count]);
-			t1 = System.nanoTime();
-			timeElapsed = t1 - t0;
-			//str += "Length ("+testArray[count].length+"): "+timeElapsed + "\n";
-			if (count > 0)
-				totalResults[count-1] += timeElapsed;
+				t0 = System.nanoTime();
+				QuickSort.qsort(testArray[count]);
+				t1 = System.nanoTime();
+				timeElapsed = t1 - t0;
+				//str += "Length ("+testArray[count].length+"): "+timeElapsed + "\n";
+				totalResults[count] += timeElapsed;
 			
 			}
 			//System.out.println(str);
 		
 		}
-		for (int count = 0; count < testArray.length-1; count++) {
+		for (int count = 0; count < testArray.length; count++) {
 			totalResults[count] /= 30;
-			System.out.println("Length: "+testArray[count+1].length+"\nTime: "+totalResults[count]);
+			System.out.println("Length: "+testArray[count].length+"\nTime: "+totalResults[count]);
 		}
 
 		}//end main
