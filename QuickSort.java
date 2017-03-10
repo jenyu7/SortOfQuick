@@ -5,12 +5,8 @@
 * 1. Summary of QuickSort algorithm:
  * QSort(arr): Using the helper function partition, divides the array into two regions around a pivot point, where the region to the left is numbers smaller than pvtVal and numbers to the right are larger. Using this concept, continue to subdivide the regions of the array until you reach a region of size 1 or less. Then, the array will have been sorted. 
  *
- * 2a. Worst pivot choice / array state and associated runtime: Worst pivot choice is a number at either the beginning or the end of the array. This is because everytime qsortHelp is called, the pivot point only increments/decrements by 1, meaning that the procedure needs to run a for loop n times, creating an n^2 runtime. 
- *
- * 2b. Best pivot choice / array state and associated runtime: Best pivot choice is a number in the middle of the array. This is because with each recursive call, the array's regions split halfway, creating more regions of smaller and larger numbers relative to their pivots. In this case, the for loop is only iterated in the fashion of a binary search. The for loop within partition is O(n) runtime and dividing is logn runtime, so combined the runtime is nlog(n) in best case. 
- *
- * 3. Approach to handling duplicate values in array: You don't need to. They end up gathering together. 
- *
+ * There is no worst or best pivot choice. The optimal pivot, of course, is the median of the region. However, this cannot
+ * simply be found. Therefore, your best bet is probably to choose a random pivot in the region each time, as it is likely to be near the middle region * anyways. 
  *****************************************************/
 
 /***
